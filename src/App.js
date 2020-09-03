@@ -31,6 +31,19 @@ class App extends React.Component {
     })
   }
 
+  addItem = (itemName) => {
+    this.setState({
+      tasks: [
+        ...this.state.tasks,
+        {
+          id: Date.now(),
+          tasks: itemName,
+          completed: false
+        }
+      ]
+    })
+  }
+
   render() {
     return (
       <div>
