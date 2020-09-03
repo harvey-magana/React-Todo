@@ -14,6 +14,19 @@ class App extends React.Component {
     this.state = {};
   }
 
+  toggleItem = itemId => {
+    this.setState({
+      todos: this.state.todos.map((item) => {
+        if(item.id === itemId) {
+          return {
+            ...item, 
+            completed: !item.completed
+          }
+        }
+      })
+    })
+  }
+
   render() {
     return (
       <div>
