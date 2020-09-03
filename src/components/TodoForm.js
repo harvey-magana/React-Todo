@@ -1,13 +1,21 @@
 import React from 'react';
 
-const TodoForm = () => {
+class TodoForm extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            item: ''
+        }
+    }
 
-    return (
-        <form>
-            <input />
-            <button>Add</button>
-        </form>
-    )
+    render() {
+        return (
+            <form>
+                <input />
+                <button>Add</button>
+            </form>
+        )
+    }
 }
 
 export default TodoForm;

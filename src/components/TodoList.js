@@ -2,11 +2,19 @@
 // feel free to change this component.js into TodoList.js
 import React from 'react';
 
-const TodoList = () => {
+class TodoList extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            item: ''
+        }
+    }
 
-    return (
-        <div>TodoList component</div>
-    )
+    render() {
+        return (
+            <div>TodoList component</div>
+        )
+    }
 }
 
 export default TodoList;
