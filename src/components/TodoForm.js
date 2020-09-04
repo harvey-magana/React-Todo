@@ -4,11 +4,9 @@ class TodoForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            todos: {
-              id: Date.now(),
-              todo: '',
-              completed: false
-            }
+            todos: [{
+                todo: ''
+              }]
         };
     }
 
@@ -21,16 +19,7 @@ class TodoForm extends React.Component {
     handleSubmit = (e) => {
         console.log(this.state.todos)
         e.preventDefault();
-        this.props.addItem({
-            todos: [
-                ...this.state.todos,
-                {
-                  id: Date.now(),
-                  todos: e.target.value,
-                  completed: false
-                }
-              ]
-        })
+        this.props.addItem(this.state.todos)
 
         // you want to spread the state first, 
         // then if there is a property inside of that state that you want to create something new of
@@ -46,6 +35,7 @@ class TodoForm extends React.Component {
                     value={this.state.todos}
                     onChange={this.handleChanges}
                 />
+                {console.log(this.state.todos)}
                 <button>Add</button>
             </form>
         )
