@@ -3,15 +3,15 @@ import React from 'react';
 const Todo = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
-        props.toggleItem(props.tasks.id)
+        props.toggleItem(props.todos.id)
     }
-
+    console.log(props)
     return (
         <div 
             onClick={handleClick}
             className={`item${props.item.completed ? " completed" : ""}`}
         >
-        <p>{props.item.todo}</p>
+            <p>{props.item.todo}</p>
         </div>
     )
 }
