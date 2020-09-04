@@ -10,11 +10,11 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: {
+      todos: [{
         id: Date.now(),
         todo: '',
         completed: false
-      }
+      }]
     };
   }
 
@@ -41,6 +41,7 @@ class App extends React.Component {
   }
 
   addItem = (itemName) => {
+    console.log(this.state.todos)
     this.setState({
       todos: [
         ...this.state.todos,
