@@ -4,11 +4,10 @@ import React from 'react';
 import Todo from './Todo';
 
 const TodoList = (props) => {
-    console.log(props)
     return (
         <div>
             {Object.entries(props.tasks).map(([key, index]) => {
-                return(<Todo key={key} toggleItem={props.toggleItem} />)
+                return(<Todo key={key} item={key} toggleItem={props.toggleItem} />)
             })}
             <button className="clear-btn" onClick={props.clearTodo}>
                 Clear Todo

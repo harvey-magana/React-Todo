@@ -6,6 +6,7 @@ const Todo = (props) => {
         props.toggleItem(props.todos.id)
     }
     console.log(props)
+    
     return (
         <div 
             onClick={handleClick}
