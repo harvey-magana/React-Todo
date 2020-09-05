@@ -41,7 +41,6 @@ class App extends React.Component {
   }
 
   addItem = (itemName) => {
-    console.log(this.state.todos)
     this.setState({
       todos: [
         ...this.state.todos,
