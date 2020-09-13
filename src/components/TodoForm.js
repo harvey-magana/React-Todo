@@ -4,19 +4,19 @@ class TodoForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            todos: ''
+            item: ''
         };
     }
 
     handleChanges = (e) => {
         this.setState({
-            todos: e.target.value
+            item: e.target.value
         })
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addItem({...this.state.todos})
+        this.props.addItem(this.state.item)
 
         // you want to spread the state first, 
         // then if there is a property inside of that state that you want to create something new of
@@ -31,7 +31,7 @@ class TodoForm extends React.Component {
                     <input 
                         type="text"
                         todo="item"
-                        value={this.state.todos}
+                        value={this.state.item}
                         onChange={this.handleChanges}
                     />
                     <button>Add</button>

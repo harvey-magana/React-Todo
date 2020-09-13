@@ -3,7 +3,7 @@ import React from 'react';
 const Todo = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
-        props.toggleItem(props.todos.id)
+        props.toggleItem(props.item.id)
     }
 
     return (
