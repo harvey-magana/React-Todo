@@ -2,7 +2,7 @@ import React from 'react';
 
 class TodoForm extends React.Component {
     constructor(props) {
-        super(props);
+        super();
         this.state = {
             item: ''
         };
@@ -24,7 +24,6 @@ class TodoForm extends React.Component {
     }
     
     render() {
-        console.log(this.props)
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

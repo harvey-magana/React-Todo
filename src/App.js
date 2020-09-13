@@ -5,17 +5,7 @@ import TodoList from './components/TodoList';
 const todos = [
   {
     id: Date.now(),
-    name: 'Walk',
-    completed: false
-  },
-  {
-    id: Date.now(),
     name: 'Trash',
-    completed: false
-  },
-  {
-    id: Date.now(),
-    name: 'Garage',
     completed: false
   }
 ]
@@ -78,6 +68,7 @@ class App extends React.Component {
         <TodoList 
             todos={this.state.todos} 
             toggleItem={this.toggleItem}
+            clearTodo={this.clearTodo}
         />
       </div>
     );

@@ -11,7 +11,7 @@ const Todo = (props) => {
             onClick={handleClick}
             className={`item${props.item.completed ? " completed" : ""}`}
         >
-            <p>{props.item.todo}</p>
+            <p>{props.item.name}</p>
         </div>
     )
 }
