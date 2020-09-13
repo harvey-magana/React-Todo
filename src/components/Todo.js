@@ -1,11 +1,12 @@
 import React from 'react';
+import '../components/Todo.css';
 
 const Todo = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
         props.toggleItem(props.item.id)
     }
-
+    console.log(props)
     return (
         <div 
             onClick={handleClick}
