@@ -2,14 +2,6 @@ import React from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
-const todos = [
-  {
-    id: Date.now(),
-    name: '',
-    completed: false
-  }
-]
-
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
