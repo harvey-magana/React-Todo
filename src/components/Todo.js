@@ -6,7 +6,7 @@ const Todo = (props) => {
         e.preventDefault();
         props.toggleItem(props.item.id)
     }
-    console.log(props)
+    console.log(props.item)
     return (
         <div 
             onClick={handleClick}

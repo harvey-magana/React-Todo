@@ -1,7 +1,7 @@
 import React from 'react';
 
 class TodoForm extends React.Component {
-    constructor(props) {
+    constructor() {
         super();
         this.state = {
             item: ''
@@ -17,10 +17,6 @@ class TodoForm extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addItem(this.state.item)
-
-        // you want to spread the state first, 
-        // then if there is a property inside of that state that you want to create something new of
-        // you want to spread that state first and then update it with what you want
     }
     
     render() {

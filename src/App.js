@@ -5,7 +5,7 @@ import TodoList from './components/TodoList';
 const todos = [
   {
     id: Date.now(),
-    name: 'Trash',
+    name: '',
     completed: false
   }
 ]
@@ -45,12 +45,13 @@ class App extends React.Component {
   }
 
   addItem = (itemName) => {
+    console.log(itemName);
     this.setState({
       todos: [
         ...this.state.todos,
         {
           id: Date.now(),
-          todos: itemName,
+          name: itemName,
           completed: false
         }
       ]
