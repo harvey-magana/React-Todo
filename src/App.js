@@ -18,7 +18,13 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: todos
+      todos: [
+        {
+          id: Date.now(),
+          name: '',
+          completed: false
+        }
+      ]
     };
   }
 
