@@ -37,6 +37,9 @@ class TodoForm extends React.Component {
                         onChange={this.handleChanges}
                     />
                     <button>Add</button>
+                <label>
+                    <input name="rememberMe" checked={this.state.rememberMe} onChange={this.handleChange} type="checkbox"/> Remember me
+                </label>
                 </form>
             </div>
         )
