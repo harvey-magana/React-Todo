@@ -10,7 +10,7 @@ class TodoForm extends React.Component {
         super();
         this.state = {
             item: '',
-            rememberMd: false
+            rememberMe: false
         };
     }
 
@@ -51,15 +51,15 @@ class TodoForm extends React.Component {
                         value={this.state.item}
                         onChange={this.handleChanges}
                     />
-                    <button>Add</button>
-                <label>
                     <input 
+                        type="checkbox"
                         name="rememberMe" 
+                        toto="rememberMe"
+                        value={this.state.rememberMe}
                         checked={this.state.rememberMe} 
                         onChange={this.handleChanges} 
-                        type="checkbox"
                     /> Remember me
-                </label>
+                    <button>Add</button>
                 </form>
             </div>
         )
