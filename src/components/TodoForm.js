@@ -15,9 +15,14 @@ class TodoForm extends React.Component {
     }
 
     handleChanges = (e) => {
+        const input = e.target;
+        const value = input.type === 'checkbox' ? input.checked : input.value;
+
+        this.setState({ [input.name]: value });
+        /*
         this.setState({
             item: e.target.value
-        })
+        })*/
     }
 
     handleSubmit = (e) => {
