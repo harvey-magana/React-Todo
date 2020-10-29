@@ -1,10 +1,16 @@
 import React from 'react';
 
+//1. update state with a rememberMe value and set it to false
+//2. add an input as a checkbox put it in the form
+//3. update the handleChange method to accommodate the new value
+//4. update the handleSubmitt method to accommodte the new value
+//5. add componentDidMount() method 
 class TodoForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            item: ''
+            item: '',
+            rememberMd: false
         };
     }
 
